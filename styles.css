@@ -8,6 +8,12 @@ body {
 
 .wrapper {
     margin-top: 50px;
+    position: relative; /* Permet aux éléments absolus à l'intérieur de se positionner correctement */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .question {
@@ -37,4 +43,10 @@ button {
     background-color: #ccc;
     color: black;
     position: absolute;
+    position: absolute; /* Indispensable pour que le bouton bouge */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
+
+
