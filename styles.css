@@ -26,3 +26,10 @@ button {
     top: 50%;
     transform: translate(-50%, -50%);
 }
+.gif {
+    display: block;
+    margin: 20px auto;
+    width: 200px; /* Ajuste la taille si besoin */
+    height: auto;
+}
+
