@@ -1,24 +1,27 @@
-const wrapper = document.querySelector( ".wrapper");
-const question = document.querySelector("".question");
+const wrapper = document.querySelector(".wrapper");
+const question = document.querySelector(".question");
 const gif = document.querySelector(".gif");
 const yes = document.querySelector(".yes");
-const no = document.querySelector("".no");
+const no = document.querySelector(".no");
 
 yes.addEventListener("click", () => {
     question.innerHTML = "I LOVE YOU TOO! ❤️";
-    gif.src = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXZnemlveHdpYW9paWxzazRkYTRiZGtzaXFzMXc4bXdxcnh3NHZvaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KztT2c4u8mYYUiMKdJ/giphy.gif"
+    gif.src = "https://media.giphy.com/media/jUwpNzg9IcyrK/giphy.gif"; // URL du GIF
+    gif.classList.remove("hidden"); // Afficher l’image
 });
 
-no.style.position = "absolute"; // Assurer que le bouton « No » peut bouger
+no.style.position = "absolute"; // S'assurer qu'il peut bouger
 
-no.addEventListener( "mouseover" , () => {
+no.addEventListener("mouseover", () => {
     const noRect = no.getBoundingClientRect();
+    
+    // Limites pour éviter que le bouton sorte de l’écran
     const maxX = window.innerWidth - noRect.width;
-    const maxY = window.innerHeight - noRect.height; // Correction ici
+    const maxY = window.innerHeight - noRect.height;
 
     const randomX = Math.floor(Math.random() * maxX);
     const randomY = Math.floor(Math.random() * maxY);
 
-    no.style.left = randomX + "px";
-    no.style.top = randomY + "px" ;
+    no.style.left = `${randomX}px`;
+    no.style.top = `${randomY}px`;
 });
