@@ -1,52 +1,57 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #ffebf0;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: pink;
 }
 
 .wrapper {
-    margin-top: 50px;
-    position: relative; /* Permet aux éléments absolus à l'intérieur de se positionner correctement */
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
-.question {
+h1 {
     font-size: 24px;
     margin-bottom: 20px;
 }
 
+.gif {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
 .buttons {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative; /* Permet au bouton "No" de bouger à l'intérieur */
 }
 
 button {
-    font-size: 18px;
     padding: 10px 20px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
-    margin: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .yes {
-    background-color: #ff4d6d;
+    background-color: green;
     color: white;
 }
 
 .no {
-    background-color: #ccc;
-    color: black;
-    position: absolute;
-    position: absolute; /* Indispensable pour que le bouton bouge */
+    background-color: red;
+    color: white;
+    position: absolute; /* Permet au bouton de bouger */
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
-
-
