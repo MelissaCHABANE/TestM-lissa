@@ -1,37 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: pink;
-}
-
-.wrapper {
-    text-align: center;
-}
-
-h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.gif {
-    width: 250px;
-    margin-bottom: 20px;
-}
-
 .buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
-    position: relative; /* Permet au bouton "No" de bouger à l'intérieur */
+    position: relative;
 }
 
 button {
@@ -50,7 +21,7 @@ button {
 .no {
     background-color: red;
     color: white;
-    position: absolute; /* Permet au bouton de bouger */
+    position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
